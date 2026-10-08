@@ -1,0 +1,45 @@
+{
+    "name": "Master-Extractor",
+    "description": "Master Extractor Bot for Telegram, built with Pyrogram.",
+    "repository": "https://github.com/Last-Update-Oct",
+    "keywords": [
+        "pyrogram",
+        "docker"
+    ],
+    "stack": "container",
+    "env": {
+        "API_ID": {
+            "description": "Your Telegram API ID. Obtain it from https://my.telegram.org.",
+            "value": "",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Your Telegram API hash. Obtain it from https://my.telegram.org.",
+            "value": "",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Your bot token from @BotFather. Create a bot at https://t.me/BotFather.",
+            "value": "",
+            "required": true
+        },
+        "DB_URL": {
+            "description": "Database connection URL for your application. Create a DB Url by https://cloud.mongodb.com/",
+            "value": "",
+            "required": true
+        },
+        "DB_NAME": {
+            "description": "Name of the database to be used.",
+            "value": "",
+            "required": true
+        }
+    },
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "standard-2x"
+        }
+    },
+    "addons": [],
+    "buildpacks": []
+}
